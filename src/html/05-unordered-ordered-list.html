@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>순차 비순차 목록</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <!-- <link rel="stylesheet" href="/src/common/index.css" /> -->
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>순차 비순차 목록</h1>
+    <!-- 비순차 목록 -->
+    <!-- type 속성에 square-->
+    <ul type="square">
+      <li><a href="/">아이템1</a></li>
+      <li><a href="/">아이템2</a></li>
+      <li><a href="/">아이템3</a></li>
+      <li><a href="/">아이템4</a></li>
+      <li><a href="/">아이템5</a></li>
+    </ul>
+    <!-- 순차 목록 -->
+    <!-- type 속성에 square-->
+    <ol start="3" type="I">
+      <li><a href="/">아이템1</a></li>
+      <li><a href="/">아이템2</a></li>
+      <li value="7"><a href="/">아이템3</a></li>
+      <li><a href="/">아이템4</a></li>
+      <li><a href="/">아이템5</a></li>
+    </ol>
+    <hr />
+    <h2>카페 W 인기 강좌</h2>
+    <ol>
+      <li>UI 구조 & 디자인</li>
+      <li>모바일 웹 UI 제작 실습</li>
+      <li>UI 인터렉션 주니어</li>
+      <li>React 프로그래밍</li>
+    </ol>
+    <hr />
+    <h2 class="sr-only">카페 W 상품</h2>
+    <p>다양한 메뉴를<br />카페 W에서 즐겨보세요</p>
+    <ul type="circle">
+      <li>카페W만의 특별함을 겸험할 수 있는 최상의 선택 음료</li>
+      <li>카페W 커피와 완벽한 어울림을 자랑하는 푸드</li>
+      <li>사용한 시도와 디자인으로 가치를 더하는 상품</li>
+      <li>소중한 사람에게 마음을 전하는 가장 좋은 방법<br />카페 W 카드</li>
+    </ul>
+  </body>
+</html>
