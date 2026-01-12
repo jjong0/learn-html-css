@@ -14,14 +14,25 @@
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
     <h1>섹션과 메인요소</h1>
     <hr />
+    <div class="container">
+      <header class="header">헤더</header>
+      <nav class="navigation">내비게이션</nav>
+      <main class="main-content">
+        <section class="like">Like 섹션</section>
+        <article class="lion">Lion 섹션</article>
+      </main>
+      <aside class="sidebar">사이드바</aside>
+      <footer class="footer">푸터</footer>
+    </div>
+    <hr />
     <div class="container"></div>
-    <header class="header">헤더</header>
-    <nav class="navigation">내비게이션</nav>
-    <main class="main-content">
-      <section class="like">Like 섹션</section>
-      <article class="lion">Lion 섹션</article>
-    </main>
-    <aside class="sidebar">사이드바</aside>
-    <footer class="footer">푸터</footer>
+    <div role="banner" class="header">헤더</div>
+    <div role="navigation" class="navigation">내비게이션</div>
+    <div role="main" class="main-content">
+      <div role="region" class="lion">Lion 섹션</div>
+      <div role="article" class="like">Like 섹션</div>
+    </div>
+    <div role="complementary" class="sidebar">사이드바</div>
+    <div role="contentinfo" class="footer">푸터</div>
   </body>
 </html>
