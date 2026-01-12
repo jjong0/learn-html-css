@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 레벨 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>텍스트 레벨 요소</h1>
+    <!-- 위첨자, 아래첨자 -->
+    <p>H<sub>2</sub>O X<sup>2</sup></p>
+
+    <!-- 축약어 -->
+    <p><abbr title="멋쟁이 사자처럼">멋사</abbr> 프론트엔드 부트캠프 화이팅!</p>
+    <p><abbr title="Hyper Text Markup Language">HTML</abbr></p>
+
+    <!-- 날짜와 시간 정보 -->
+    <p><time datetime="2026-01-12T15:17:28">2026년 1월 12일</time></p>
+    <p>오늘은 내 <time datetime="2000-05-21">생일</time>이다.</p>
+
+    <!-- 삭제된 정보 -->
+    <p>
+      정상가격 <del>100,000원</del><br />
+      할인가격 <ins>9,900원</ins>
+    </p>
+
+    <!-- 하이라이트 텍스트 -->
+    <p>멋쟁이 사자처럼 <mark>프론트엔드</mark> 부트캠프 화이팅!</p>
+
+    <!-- 저작권/법률 표기 -->
+    <p><small>&copy;copyright likelion.net</small></p>
+  </body>
+</html>
