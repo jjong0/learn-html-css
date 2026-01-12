@@ -9,53 +9,232 @@
     <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
     <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid currentColor;
+      }
+      th,
+      td {
+        border: 1px solid currentColor;
+      }
+      thead,
+      tfoot {
+        background-color: #ffc;
+      }
+      [rowspan] {
+        background-color: #fcf;
+      }
+      .team {
+        width: 70px;
+      }
+      .name,
+      .gender {
+        width: 100px;
+      }
+    </style>
   </head>
   <body style="margin: 50px">
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
     <h1>테이블 관련 요소</h1>
     <hr />
-    <table style="width: 100%; border: 1px solid currentColor">
+    <table>
       <caption>
         멋사 프론트엔드 부트캠프 17기
       </caption>
+      <col class="team" />
+      <colgroup>
+        <col class="name" />
+        <col class="gender" />
+      </colgroup>
       <thead>
         <tr>
-          <th scope="col">번호</th>
-          <th scope="col">이름</th>
           <th scope="col">회고조</th>
+          <th scope="col">이름</th>
           <th scope="col">성별</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
+          <th rowspan="3" scope="rowgroup">0조</th>
           <td>강서진</td>
-          <td>0조</td>
           <td>여성</td>
         </tr>
         <tr>
-          <td>2</td>
+          <!-- <th>0조</th> -->
           <td>슬비쌤</td>
-          <td>0조</td>
           <td>여성</td>
         </tr>
         <tr>
-          <td>3</td>
+          <!-- <th>0조</th> -->
           <td>민규선</td>
-          <td>0조</td>
           <td>여성</td>
         </tr>
       </tbody>
-      <tbody></tbody>
-      <tfoot></tfoot>
+      <tbody>
+        <tr>
+          <th rowspan="6" scope="rowgroup">1조</th>
+          <td>강재훈</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>1조</td> -->
+          <td>김연수</td>
+          <td>여성</td>
+        </tr>
+        <tr>
+          <!-- <td>1조</td> -->
+          <td>김준서</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>1조</td> -->
+          <td>오은진</td>
+          <td>여성</td>
+        </tr>
+        <tr>
+          <!-- <td>1조</td> -->
+          <td>이우현</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>1조</td> -->
+          <td>최유종</td>
+          <td>남성</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th rowspan="5" scope="rowgroup">2조</th>
+          <td>김도혁</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>2조</td> -->
+          <td>박규나</td>
+          <td>여성</td>
+        </tr>
+        <tr>
+          <!-- <td>2조</td> -->
+          <td>박소유</td>
+          <td>여성</td>
+        </tr>
+        <tr>
+          <!-- <td>2조</td> -->
+          <td>이동근</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>2조</td> -->
+          <td>임태형</td>
+          <td>남성</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th rowspan="5" scope="rowgroup">3조</th>
+          <td>박현우</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>3조</td> -->
+          <td>방효진</td>
+          <td>여성</td>
+        </tr>
+        <tr>
+          <!-- <td>3조</td> -->
+          <td>엄인호</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>3조</td> -->
+          <td>이규화</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>3조</td> -->
+          <td>홍정빈</td>
+          <td>남성</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th rowspan="5" scope="rowgroup">4조</th>
+          <td>송우진</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>4조</td> -->
+          <td>이선우</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>4조</td> -->
+          <td>장종호</td>
+          <td>남성</td>
+        </tr>
+        <tr>
+          <!-- <td>4조</td> -->
+          <td>최영은</td>
+          <td>여성</td>
+        </tr>
+        <tr>
+          <!-- <td>4조</td> -->
+          <td>추유나</td>
+          <td>여성</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>총 인원</td>
+          <td colspan="2">24명</td>
+        </tr>
+      </tfoot>
     </table>
     <hr />
     <!-- table 요소를 figure 요소안에 선언할 경우 -->
     <figure>
       <table>
-        ...
+        <caption>
+          멋사 프론트엔드 부트캠프 17기
+        </caption>
+        <col class="team" />
+        <colgroup>
+          <col class="name" />
+          <col class="gender" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="t">회고조</th>
+            <th scope="n">이름</th>
+            <th scope="g">성별</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="3" id="zero">0조</th>
+            <td headers="n zero">강서진</td>
+            <td headers="g zero">여성</td>
+          </tr>
+          <tr>
+            <!-- <th>0조</th> -->
+            <td>슬비쌤</td>
+            <td>여성</td>
+          </tr>
+          <tr>
+            <!-- <th>0조</th> -->
+            <td>민규선</td>
+            <td>여성</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>총 인원</td>
+            <td colspan="2">24명</td>
+          </tr>
+        </tfoot>
       </table>
-      <figcaption>...</figcaption>
+      <figcaption>멋사 프론트엔드 부트캠프 17기</figcaption>
     </figure>
   </body>
 </html>
