@@ -13,5 +13,31 @@
   <body style="margin: 50px">
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
     <h1>폼(input)요소</h1>
+    <!-- form 요소 안에 submit 버튼이 있는 경우 -->
+    <form action="/" method="post" id="likelion">
+      <input type="email" name="" id="" />
+      <button type="submit">전송</button>
+    </form>
+    <!-- form 요소 밖에 submit 버튼이 있는 경우(id, form 속성으로 연결) -->
+    <!-- HTML5에 새롭게 추가된 사용 방식 -->
+    <form action="/" method="post" id="bootcamp">
+      <input type="email" name="" id="" />
+    </form>
+    <button type="submit" form="bootcamp">전송</button>
+    <hr />
+    <!-- fieldset과 legend 요소로 연관성 있는 폼 서식을 그룹화 시킬 경우 -->
+    <form action="/">
+      <fieldset>
+        <legend>사용자 정보</legend>
+        <div>
+          <label for="name">이름</label>
+          <input type="text" id="" />
+        </div>
+        <div>
+          <label for="password">암호</label>
+          <input type="password" id="password" />
+        </div>
+      </fieldset>
+    </form>
   </body>
 </html>
