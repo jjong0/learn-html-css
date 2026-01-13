@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>picture와 source요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>picture와 source요소</h1>
+    <!-- 디바이스 픽셀 밀도에 따라 반응형 이미지를 적용할 경우 (W descriptor)-->
+    <picture>
+      <source srcset="/src/assets/rwd/small-550.jpg 550w, /src/assets/rwd/medium-1024.jpg 1024w, /src/assets/rwd/large-1600.jpg 1600w" sizes="50vw" />
+      <img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+    </picture>
+    <!-- 디바이스 픽셀 밀도에 따라 반응형 이미지를 적용할 경우 (X descriptor)-->
+    <picture>
+      <source srcset="/src/assets/rwd/image-1x.png 1x, /src/assets/rwd/image-2x.png 2x, /src/assets/rwd/image-3x.png 3x" />
+      <img src="/src/assets/rwd/image-src.png" alt="" />
+    </picture>
+    <!-- 미디어 조건이 orientation일 경우 -->
+    <picture>
+      <source media="(orientation: landscape)" srcset="/src/assets/rwd/lezhin-wide.webp" />
+      <img src="/src/assets/rwd/lezhin-narrow.webp" alt="" />
+    </picture>
+    <!-- 미디어 조건이 width 일 경우 -->
+    <picture>
+      <source media="(width >600px)" srcset="/src/assets/rwd/lezhin-wide.webp" />
+      <img src="/src/assets/rwd/lezhin-narrow.webp" alt="" />
+    </picture>
+  </body>
+</html>
