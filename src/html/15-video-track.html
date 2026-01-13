@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video 관련 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>video 관련 요소</h1>
+    <!-- source 요소를 사용하여 비디오를 HTML문서에 포함하는 경우 -->
+    <!-- 포스터 이미지를 지정할 때 - poster 속성 -->
+    <!-- 자동 재생 설정 -autoplay -->
+    <!-- 자동재생 설정 시 반드시 음소거 속성을 함께 사용하여야함 -->
+    <video autoplay muted controls poster="/src/assets/video/poster.jpg">
+      <source src="/src/assets/video/google-developer-stories.webm" type="video/webm" />
+      <source src="/src/assets/video/google-developer-stories.mp4" type="video/mp4" />
+      <a href="/src/assets/video/google-developer-stories.mp4" download="구글 개발자 이야기">영상 다운로드</a>
+    </video>
+    <hr />
+    <!-- video 요소를 사용하여 비디오를 HTML문서에 포함하는 경우 -->
+    <video controls src="/src/assets/video/google-developer-stories.mp4" type="video/mp4">
+      <a href="/src/assets/video/google-developer-stories.mp4" download="구글 개발자 이야기">영상 다운로드</a>
+    </video>
+    <hr />
+    <!-- track 요소를 사용하여 영상 자막을 제공하는 경우 -->
+    <video controls poster="/src/assets/video/poster.jpg">
+      <source src="/src/assets/video/stories.mp4" type="video/mp4" />
+      <track src="/src/assets/video/stories-en.vtt" srclang="en" label="영어 자막" />
+      <track src="/src/assets/video/stories-ko.vtt" srclang="ko" label="한국어 자막" />
+    </video>
+  </body>
+</html>
