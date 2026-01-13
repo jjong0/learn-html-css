@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼(button)요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>폼(button)요소</h1>
+    <!-- 전송, 취소, 일반 버튼 -->
+    <!-- button 요소의 type 속성을 생각하면 기본 값은 submit으로 처리 -->
+    <div>
+      <!-- 버튼 텍스트와 해당 버튼의 aria-label 속성이 다를경우 스크린  리더는 aria-label속성의 값을 읽어줌 -->
+      <button aria-label="프론트엔드">전송</button>
+      <button type="submit">전송</button>
+      <button type="reset">취소</button>
+      <button type="button" class="change-bg">눌러봐</button>
+    </div>
+    <hr />
+    <!-- 이미지 버튼 : 접근가능한 이름 (alt) -->
+    <!-- 이미지 버튼 : 접근가능한 이름 (aria-label) -->
+    <div>
+      <button type="button">
+        <img src="/src/assets/cart/icon-cart.svg" alt="장바구니" />
+      </button>
+      <button type="button" aria-label="카트">
+        <img src="/src/assets/cart/icon-cart.svg" />
+      </button>
+    </div>
+    <hr />
+    <!-- 이미지 버튼 : 접근가능한 이름 (aria-labelledby) -->
+    <figure>
+      <button type="button" aria-labelledby="shopping">
+        <img src="/src/assets/cart/icon-cart.svg" />
+      </button>
+      <figcaption id="shopping">쇼핑백</figcaption>
+    </figure>
+    <hr />
+    <!-- 이미지 버튼 : 접근가능한 이름 (title) -->
+    <figure>
+      <button type="button" title="장보기">
+        <img src="/src/assets/cart/icon-cart.svg" />
+      </button>
+      <figcaption>장보기</figcaption>
+    </figure>
+    <hr />
+    <!-- 이미지 버튼 : 접근가능한 이름 다수 -->
+    <figure>
+      <button type="button" title="장보기" aria-label="카트" aria-labelledby="shoppingBag">
+        <img src="/src/assets/cart/icon-cart.svg" alt="장바구니" />
+      </button>
+      <figcaption id="shoppingBag">쇼핑백</figcaption>
+    </figure>
+    <hr />
+    <!-- 이미지 버튼 (SVG 요소) -->
+    <figure>
+      <button type="button" aria-labelledby="cart">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <title>장바구니 -Cart</title>
+          <path
+            fill="currentColor"
+            d="M13.5001 12C13.1022 12 12.7207 12.1487 12.4394 12.4135C12.158 12.6783 12 13.0373 12 13.4118C12 13.7862 12.158 14.1453 12.4394 14.41C12.7207 14.6748 13.1022 14.8235 13.5001 14.8235H15.3301L15.7876 16.5487C15.7922 16.5686 15.7972 16.5883 15.8026 16.608L17.8397 24.2739L16.5002 25.5332C14.6101 27.312 15.9481 30.3529 18.6212 30.3529H31.5007C31.8985 30.3529 32.28 30.2042 32.5613 29.9394C32.8427 29.6747 33.0007 29.3156 33.0007 28.9412C33.0007 28.5668 32.8427 28.2077 32.5613 27.9429C32.28 27.6782 31.8985 27.5294 31.5007 27.5294H18.6212L20.1213 26.1176H30.0006C30.2791 26.1175 30.5521 26.0444 30.7889 25.9065C31.0258 25.7686 31.2172 25.5714 31.3416 25.3369L35.8418 16.8664C35.956 16.6512 36.01 16.4121 35.9985 16.1718C35.987 15.9315 35.9104 15.6979 35.7761 15.4933C35.6417 15.2886 35.4541 15.1197 35.2309 15.0025C35.0077 14.8853 34.7563 14.8237 34.5008 14.8235H18.4202L17.9552 13.0687C17.8739 12.7634 17.6866 12.4924 17.423 12.2988C17.1594 12.1052 16.8346 12 16.5002 12H13.5001ZM33.0007 33.8824C33.0007 34.444 32.7636 34.9826 32.3417 35.3798C31.9197 35.7769 31.3474 36 30.7506 36C30.1539 36 29.5816 35.7769 29.1596 35.3798C28.7376 34.9826 28.5006 34.444 28.5006 33.8824C28.5006 33.3207 28.7376 32.7821 29.1596 32.385C29.5816 31.9878 30.1539 31.7647 30.7506 31.7647C31.3474 31.7647 31.9197 31.9878 32.3417 32.385C32.7636 32.7821 33.0007 33.3207 33.0007 33.8824ZM18.7502 36C19.347 36 19.9193 35.7769 20.3413 35.3798C20.7632 34.9826 21.0003 34.444 21.0003 33.8824C21.0003 33.3207 20.7632 32.7821 20.3413 32.385C19.9193 31.9878 19.347 31.7647 18.7502 31.7647C18.1535 31.7647 17.5812 31.9878 17.1592 32.385C16.7372 32.7821 16.5002 33.3207 16.5002 33.8824C16.5002 34.444 16.7372 34.9826 17.1592 35.3798C17.5812 35.7769 18.1535 36 18.7502 36Z"
+          />
+        </svg>
+      </button>
+      <figcaption id="cart">Cart</figcaption>
+    </figure>
+    <script>
+      // ===== DOM 선택 =====
+      const changeBgBtn = document.querySelector('.change-bg');
+      const body = document.body;
+
+      // ===== 함수 구현 =====
+      const getRandomColor = () => {
+        // 16진수 색상 코드 생성
+        return `#${Math.floor(Math.random() * 16777215)
+          .toString(16)
+          .padStart(6, '0')}`;
+      };
+
+      const changeBodyBgColor = () => {
+        body.style.backgroundColor = getRandomColor();
+      };
+
+      // ===== 이벤트 바인딩 =====
+      changeBgBtn.addEventListener('click', changeBodyBgColor);
+    </script>
+  </body>
+</html>
