@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼(select,textarea) 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>폼(select,textarea) 요소</h1>
+    <!-- 콤보 박스 -->
+    <div>
+      <label for="selectPet-1">반려 동물</label>
+      <select name="selectPet-1" id="selectPet-1">
+        <option value="">반려동물 선택</option>
+        <option value="dog">강아지</option>
+        <option value="cat">고양이</option>
+        <option value="hamster">햄스터</option>
+        <option value="spider">거미</option>
+        <option value="goldsfish">열대어</option>
+        <option value="parrot">패럿</option>
+      </select>
+    </div>
+    <hr />
+    <!-- 리스트 박스 -->
+    <div>
+      <label for="selectPet-2">반려 동물</label>
+      <select name="selectPet-2" id="selectPet-2" size="10">
+        <option value="dog">강아지</option>
+        <option value="cat">고양이</option>
+        <option value="hamster">햄스터</option>
+        <option value="spider">거미</option>
+        <option value="goldsfish">열대어</option>
+        <option value="parrot">패럿</option>
+      </select>
+    </div>
+    <hr />
+    <!-- 리스트 박스 다중선택(multiple) -->
+    <div>
+      <label for="selectPet-3">반려 동물</label>
+      <select name="selectPet-3" id="selectPet-3" size="10" multiple>
+        <option value="dog">강아지</option>
+        <option value="cat">고양이</option>
+        <option value="hamster">햄스터</option>
+        <option value="spider">거미</option>
+        <option value="goldsfish">열대어</option>
+        <option value="parrot">패럿</option>
+      </select>
+    </div>
+    <hr />
+    <!-- 여러 줄 글상자 -->
+    <div>
+      <!-- <label for="review">후기</label> -->
+      <textarea name="review" id="review" rows="10" cols="50" aria-label="후기">
+수상 소감을 남겨주세요
+      </textarea>
+    </div>
+  </body>
+</html>
