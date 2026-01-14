@@ -9,6 +9,11 @@
     <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
     <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
+    <style>
+      input:invalid {
+        outline: 2px solid red;
+      }
+    </style>
   </head>
   <body style="margin: 50px">
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
@@ -44,7 +49,7 @@
         </div>
         <div>
           <label for="userEmail">이메일</label>
-          <input type="text" name="userEmail" id="userEmail" required placeholder="guest@linklion.net" pattern="[A-Za-z0-9!#$%&'*+/=?^_`{|}~@.\-]+" />
+          <input type="email" name="userEmail" id="userEmail" required placeholder="guest@linklion.net" pattern="[A-Za-z0-9!#$%&'*+/=?^_`{|}~@.\-]+" />
         </div>
         <!-- 암묵적인 레이블링 -->
         <div>
