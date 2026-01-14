@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <!-- ::backdrop 스타일이 적용되지 않음 -->
+    <style>
+      dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>dialog 요소와 popover 속성</h1>
+    <button type="button" class="show-dialog">혜택 보기</button>
+    <dialog class="panel-dialog" aria-labelledby="surprise-benefits" aria-describedby="surprise-benefits-details">
+      <h2 id="surprise-benefits">깜짝 혜택</h2>
+      <p id="surprise-benefits-details">쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일 만나요!</p>
+      <a href="/">쿠폰 확인하기</a>
+      <button type="button" class="close-dialog">닫기</button>
+    </dialog>
+    <hr />
+    <!-- popover 속성 -->
+    <div>
+      <button type="button" popovertarget="likeLion">팝오버 보기</button>
+      <p popover id="likeLion">멋쟁이 사자처럼 프론트엔드 부트캠프 화이팅!</p>
+    </div>
+    <script>
+      // DOM selection 🔎
+      const btnShow = document.querySelector('.show-dialog');
+      const btnClose = document.querySelector('.close-dialog');
+      const panel = document.querySelector('.panel-dialog');
+
+      // Functions 🔧
+      function openPanel() {
+        if (!panel) return;
+        // add open attribute (HTML) so CSS/selectors relying on [open] work
+        panel.setAttribute('open', '');
+        // use showModal when available for proper focus/modal behavior
+        if (typeof panel.showModal === 'function') {
+          try {
+            panel.showModal();
+          } catch (e) {
+            // ignore — attribute keeps it visible as a fallback
+          }
+        }
+      }
+
+      function closePanel() {
+        if (!panel) return;
+        // close dialog API when available
+        if (typeof panel.close === 'function') panel.close();
+        // ensure attribute is removed
+        panel.removeAttribute('open');
+      }
+
+      // Event binding 🔗
+      btnShow && btnShow.addEventListener('click', openPanel);
+      btnClose && btnClose.addEventListener('click', closePanel);
+      // keep attribute state consistent when dialog is closed via ESC or dialog.close()
+      panel && panel.addEventListener('close', () => panel.removeAttribute('open'));
+      panel &&
+        panel.addEventListener('cancel', (e) => {
+          // prevent default to allow custom handling, then close
+          e.preventDefault();
+          panel.close();
+          panel.removeAttribute('open');
+        });
+    </script>
+  </body>
+</html>
