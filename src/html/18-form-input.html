@@ -96,5 +96,37 @@
       <label for="">출발일</label>
       <input type="datetime-local" name="" id="" />
     </div>
+    <!-- 파일 선택 -->
+    <div>
+      <label for="selectFile">파일첨부</label>
+      <input type="file" name="selectFile" id="selectFile" />
+    </div>
+    <!-- 전화번호 입력 서식 -->
+    <div>
+      <label for="" cellPhone>휴대폰</label>
+      <input type="tel" name="cellPhone" id="cellPhone" />
+    </div>
+    <!-- 검색어 입력 서식 -->
+    <div>
+      <label for="keyword">검색어</label>
+      <input type="search" name="keyword" id="keyword" />
+    </div>
+    <!-- 입력 서식 읽기 전용으로 지정 -->
+    <div>
+      <label for="team">회고팀</label>
+      <input type="text" readonly name="team" id="team" value="0조" />
+    </div>
+    <!-- 입력 서식 비활성화 -->
+    <div>
+      <label for="class">프론트엔드 부트캠프</label>
+      <input type="text" disabled name="class" id="class" value="17기" />
+    </div>
+    <!-- autofocus 속성 -->
+    <div>
+      <label>
+        시작 위치
+        <input type="text" autofocus />
+      </label>
+    </div>
   </body>
 </html>
