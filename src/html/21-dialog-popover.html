@@ -33,46 +33,30 @@
       <p popover id="likeLion">멋쟁이 사자처럼 프론트엔드 부트캠프 화이팅!</p>
     </div>
     <script>
-      // DOM selection 🔎
-      const btnShow = document.querySelector('.show-dialog');
-      const btnClose = document.querySelector('.close-dialog');
-      const panel = document.querySelector('.panel-dialog');
+      // ===== DOM 선택 =====
+      const showDialogBtn = document.querySelector('.show-dialog');
+      const closeDialogBtn = document.querySelector('.close-dialog');
+      const panelDialog = document.querySelector('.panel-dialog');
 
-      // Functions 🔧
-      function openPanel() {
-        if (!panel) return;
-        // add open attribute (HTML) so CSS/selectors relying on [open] work
-        panel.setAttribute('open', '');
-        // use showModal when available for proper focus/modal behavior
-        if (typeof panel.showModal === 'function') {
-          try {
-            panel.showModal();
-          } catch (e) {
-            // ignore — attribute keeps it visible as a fallback
-          }
+      // ===== 함수 구현 =====
+      const openDialog = () => {
+        if (typeof panelDialog.showModal === 'function') {
+          panelDialog.showModal();
+        } else {
+          panelDialog.setAttribute('open', ''); // fallback
         }
-      }
+      };
+      const closeDialog = () => {
+        if (typeof panelDialog.close === 'function') {
+          panelDialog.close();
+        } else {
+          panelDialog.removeAttribute('open'); // fallback
+        }
+      };
 
-      function closePanel() {
-        if (!panel) return;
-        // close dialog API when available
-        if (typeof panel.close === 'function') panel.close();
-        // ensure attribute is removed
-        panel.removeAttribute('open');
-      }
-
-      // Event binding 🔗
-      btnShow && btnShow.addEventListener('click', openPanel);
-      btnClose && btnClose.addEventListener('click', closePanel);
-      // keep attribute state consistent when dialog is closed via ESC or dialog.close()
-      panel && panel.addEventListener('close', () => panel.removeAttribute('open'));
-      panel &&
-        panel.addEventListener('cancel', (e) => {
-          // prevent default to allow custom handling, then close
-          e.preventDefault();
-          panel.close();
-          panel.removeAttribute('open');
-        });
+      // ===== 이벤트 바인딩 =====
+      showDialogBtn.addEventListener('click', openDialog);
+      closeDialogBtn.addEventListener('click', closeDialog);
     </script>
   </body>
 </html>
