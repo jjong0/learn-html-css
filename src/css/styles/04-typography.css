@@ -1,0 +1,30 @@
+/* 글꼴 - 웹폰트(SUIT Variable) */
+body {
+  font-family: 'SUIT Variable', sans-serif;
+}
+
+/* 글자 크기 */
+.like {
+  font-size: 20px;
+}
+
+/* 글자 굵기 */
+.lion {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 글자 스타일 */
+.euid {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* 글자간격 또는 단어 간격 */
+.school {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  word-spacing: 20px;
+}
