@@ -24,3 +24,42 @@ div.go-index {
   background-color: lime;
   padding: 10px;
 }
+/* 자손 결합자 */
+.navigation li {
+  color: blue;
+}
+
+.navigation .menu li {
+  margin-block: 10px;
+}
+
+/* 자식 결합자 */
+.menu > li {
+  list-style-type: disc;
+}
+.menu > li > ul > li {
+  list-style-type: square;
+  margin-left: 20px;
+}
+/* 선택자 그룹화 */
+h1,
+.menu,
+#frontend,
+[title] {
+  font-style: italic;
+}
+/* 가상 요소 선택자 */
+p::first-letter {
+  font-size: 60px;
+}
+h1::before {
+  content: '프론트엔드 ';
+}
+h1::after {
+  content: ' 부트캠프';
+}
+
+/* 가상 클래스 선택자 */
+.navigation:hover {
+  background-color: pink;
+}
