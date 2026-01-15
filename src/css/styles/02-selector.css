@@ -1,0 +1,26 @@
+/* 전체 선택자 */
+* {
+  color: red;
+}
+
+/* 요소 선택자 */
+h1 {
+  background-color: yellow;
+}
+
+/* 클래스 선택자 */
+div.go-index {
+  border: 3px double black;
+  margin-block: 10px;
+  padding: 10px;
+}
+/* 아이디 선택자 */
+#frontend {
+  font-size: 36px;
+  font-weight: bold;
+}
+/* 속성 선택자 */
+[title] {
+  background-color: lime;
+  padding: 10px;
+}
