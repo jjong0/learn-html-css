@@ -1,1 +1,27 @@
-/* 메인 페이지 스타일 */
+/* 메인 페이지 스타일 -index.html */
+/* 본문의 기본 글꼴 설정 */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 하이퍼링크 스타일 */
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+/* 컨테이너 레이아웃 */
+.container {
+  margin: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  h1,
+  h2 {
+    margin-block: 10px;
+  }
+
+  .markup {
+    order: 1;
+  }
+}
