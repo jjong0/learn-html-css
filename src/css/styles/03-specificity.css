@@ -23,12 +23,29 @@ p {
 #euid {
   color: purple;
 }
+#frontend {
+  color: teal;
+}
+
+.like.a.b.c.d.e.f.g.h.i.j {
+  color: salmon;
+}
 
 /* 클래스 선택자의 가중치 - 10 */
 .lion {
   color: orange;
 }
 
+/*  !important를 활용하여 우선 순위 강제로 높이기 */
 .bootcamp {
-  color: gray;
+  color: gray !important;
+}
+
+/* 상속과 겹침 그리고 우선순위 */
+div.likelion {
+  color: red;
+}
+
+.school {
+  color: purple;
 }
