@@ -1,0 +1,28 @@
+/* static 값 - 대다수 요소의 기본 값 */
+
+/* position: relative를 활용하여 상자 그림자 스타일링 */
+.shadow {
+  margin-block: 10px;
+  background-color: black;
+}
+
+/* relative 값 - 상대 위치 */
+h3 {
+  padding: 10px;
+  background-color: #ffc;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+/* absolute 값 - 절대위치 */
+h1 {
+}
+
+h1 span {
+  background-color: #fcf;
+  position: absolute;
+  width: 100px;
+  top: 0;
+  left: 0;
+}
