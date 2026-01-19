@@ -1,1 +1,5 @@
 /* 기본 스타일 */
+/* 글꼴 - 웹폰트(SUIT Variable) */
+body {
+  font-family: 'SUIT Variable', sans-serif;
+}
