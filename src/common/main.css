@@ -2,6 +2,7 @@
 /* 본문의 기본 글꼴 설정 */
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(-45deg, #ffc, #fcf, #cff, #cfc, #ccc);
 }
 
 /* 하이퍼링크 스타일 */
