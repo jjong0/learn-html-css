@@ -3,9 +3,23 @@ body {
   font-family: 'SUIT Variable', sans-serif;
 }
 
+.unit {
+  font-size: 10px;
+}
+
 /* 글자 크기 */
 .like {
+  background-color: #ffc;
+  /* px 단위 */
   font-size: 20px;
+  /* rem 단위 */
+  font-size: 2rem; /* 루트기준 16*2= 32px */
+  /* em 단위 */
+  font-size: 2em; /* 상속받은 글자 크기에 곱하기 */
+  /* vw 단위 */
+  font-size: 5vw; /* 반응형디자인 할때 유용 */
+  /* vw 단위 & clamp() */
+  font-size: clamp(1rem, 2.5vw, 2rem);
 }
 
 /* 글자 굵기 */
