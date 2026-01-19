@@ -30,15 +30,74 @@ body {
 
 /* 글자 스타일 */
 .euid {
+  background-color: #fcf;
   font-size: 20px;
-  font-weight: 700;
   font-style: italic;
+  /* 키워드로 굵기 지정 */
+  font-weight: bold;
+  /* 값으로 굵기 지정 */
+  font-weight: 100; /* thin */
 }
 
 /* 글자간격 또는 단어 간격 */
 .school {
+  background-color: #cff;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 4px;
-  word-spacing: 20px;
+  /* 글자 간격 */
+  letter-spacing: -0.02em;
+  /* 단어 간격 */
+  word-spacing: 0.25rem;
+}
+
+/* 가로 정렬 */
+.frontend {
+  background-color: #ccf;
+  /* 가운데 정렬 */
+  text-align: center;
+  /* 왼쪽 정렬 */
+  text-align: left;
+  /* 논리 값(end) */
+  text-align: end;
+}
+
+/* 세로 정렬 */
+.bootcamp {
+  background-color: #ccc;
+  height: 50px;
+  text-align: center;
+  /* 가운데 정렬 */
+  align-content: center;
+  /* 밑줄 장식 */
+  text-decoration: underline;
+}
+
+/* 줄높이 */
+.teacher {
+  font-size: 10px;
+  /* 한줄 높이 - percentage */
+  line-height: 100%;
+  /* 한줄 높이 - number */
+  line-height: 1;
+}
+
+.seulbinim {
+  background-color: #fcc;
+  font-size: 20px;
+  /* 양쪽 정렬 */
+  text-align: justify;
+  /* 첫줄 들여쓰기 */
+  text-indent: 5em;
+  /* 영문 대소문자 */
+  text-transform: lowercase;
+}
+
+/* font 단축속성 */
+.likelion {
+  background-color: teal;
+  color: white;
+  padding: 10px;
+  font:
+    700 italic small-caps 20px/1.5 'SUIT Variable',
+    sans-serif;
 }
