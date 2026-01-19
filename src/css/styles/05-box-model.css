@@ -28,3 +28,23 @@
   border: 5px solid red;
   margin: 0 auto;
 }
+
+.school {
+  background-color: #fcc;
+  padding: 10px;
+}
+
+.school span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* display */
+.frontend {
+  background-color: #ffc;
+  /* inline 값 지정 */
+  display: inline;
+  /* block 값 지정 */
+  display: block;
+  width: 200px;
+}
