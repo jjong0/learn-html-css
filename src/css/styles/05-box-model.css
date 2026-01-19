@@ -1,0 +1,30 @@
+/* border-width border-style border-color 속성 */
+.like {
+  background-color: #ffc;
+  border-width: 1px 2px 3px 4px;
+  border-style: solid dotted dashed double;
+  border-color: red blue green purple;
+}
+
+.lion {
+  background-color: #fcf;
+  /* border 속성 */
+  border: 5px solid black;
+  /* padding 속성 */
+  padding: 10px;
+  padding: 10px 20px;
+  padding: 10px 20px 30px;
+  padding: 10px 20px 30px 40px;
+  /* margin 속성 */
+  /* margin 속성의 경우 상하 방향으로 적용된 여백끼리 겹치는 현상이 발생함 */
+  margin: 10px;
+}
+
+/* Basic 박스 모델을 활용한 가운데 정렬 레이아웃 */
+.bootcamp {
+  background-color: #cff;
+  width: 500px;
+  padding: 10px;
+  border: 5px solid red;
+  margin: 0 auto;
+}
