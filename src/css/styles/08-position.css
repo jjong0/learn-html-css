@@ -16,13 +16,35 @@ h3 {
 }
 
 /* absolute 값 - 절대위치 */
-h1 {
+.wrapper {
+  padding: 20px;
+  border: 1px solid green;
+  position: relative;
 }
 
-h1 span {
+.wrapper h1 {
+  padding: 20px;
+  border: 1px solid red;
+}
+
+.wrapper h1 span {
   background-color: #fcf;
   position: absolute;
   width: 100px;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+/* fixed 값 - 뷰포트 기준 고정 위치 */
+h2 {
+  background-color: #cfc;
+}
+
+h2 span {
+  background-color: #ccf;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
 }
