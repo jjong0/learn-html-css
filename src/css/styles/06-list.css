@@ -1,3 +1,20 @@
+/* list-style-type 속성 */
 .like {
   list-style-type: square;
+}
+
+/* list-style-image 속성 */
+.lion {
+  list-style-image: url(/src/assets/thumbnail/new.png);
+}
+
+/* list-style-position 속성 */
+.bootcamp {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* list-style 단축 속성 */
+.school {
+  list-style: circle inside url(/src/assets/thumbnail/new.png);
 }
