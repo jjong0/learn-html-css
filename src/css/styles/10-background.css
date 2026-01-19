@@ -1,0 +1,28 @@
+/*  body 요소의 배경  background 속성 (단축 속성)*/
+body {
+  background: #ccf url(/src/assets/images/tree.png) no-repeat 100% 100% /144px fixed;
+}
+
+/* 단락 기본 여백 */
+div,
+p {
+  margin-block: 10px;
+}
+
+/* 배경 색상 background-color */
+.like {
+  background-color: yellow;
+}
+
+/* 배경 이미지 - background-image */
+/* 배경 반복 - background-repeat */
+/* 배경 크기 - background-size */
+.lion {
+  padding: 10px;
+  height: 200px;
+  background-color: pink;
+  background-image: url(/src/assets/images/rabbit.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: contain;
+}
