@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아바타(Avatars)</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/avatars/avatars.css" />
+    <link rel="stylesheet" href="/src/ui/utils/ui-component.css" />
+    <script type="module" src="/src/ui/utils/ui-component.js"></script>
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>아바타(Avatars)</h1>
+    <hr />
+    <h2>컴포넌트</h2>
+    <!-- 인터렉션이 있는 경우 -->
+    <div class="ui-component">
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face1.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <br />
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <div class="ui-component">
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face1.webp" alt="홍길동" />
+        <span class="sr-only">오프라인</span>
+        <span class="state"></span>
+      </button>
+      <br />
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h2>레이아웃</h2>
+    <div class="avatars">
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face1.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face2.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face3.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face4.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <br />
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face5.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face6.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face7.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face8.webp" alt="홍길동" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+    </div>
+  </body>
+</html>

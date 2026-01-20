@@ -1,0 +1,41 @@
+/* 컴포넌트 */
+.avatar {
+  --size: 64px;
+  --border-color: var(--white, #fff);
+  --online: var(--avatar-green, #03cc5c);
+  --offline: var(--avatar-gray, #bcc3c7);
+
+  position: relative;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: var(--size);
+  height: var(--size);
+
+  img {
+    border-radius: 50%;
+  }
+
+  .state {
+    --size: 25%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+  }
+
+  &.online {
+    .state {
+      background: var(--avatar-green);
+    }
+  }
+
+  &.offline {
+    .state {
+      background: var(--avatar-gray);
+    }
+  }
+}
