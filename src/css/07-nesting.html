@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Nesting</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/css/styles/07-nesting.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>CSS Nesting</h1>
+    <hr />
+    <div class="likelion">
+      <ul>
+        <li>중첩 목록1</li>
+        <li>중첩 목록2</li>
+        <li>중첩 목록3</li>
+        <li>
+          중첩 목록4
+          <ul>
+            <li>하위 목록1</li>
+            <li>하위 목록2</li>
+            <li>하위 목록3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <ol class="menu">
+      <li class="menu__item menu--is-active">
+        <a href="/" class="menu__link">목록 링크</a>
+      </li>
+      <li class="menu__item">
+        <a href="/" class="menu__link">목록 링크</a>
+      </li>
+      <li class="menu__item">
+        <a href="/" class="menu__link">목록 링크</a>
+      </li>
+      <li class="menu__item">
+        <a href="/" class="menu__link">목록 링크</a>
+      </li>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/* CSS 중첩 */
+.likelion {
+  background-color: #ffc;
+  padding: 10px;
+
+  /* & 연산자를 사용하여 .likelion을 선택할 수 있음 */
+  &:hover {
+    background-color: #fcf;
+  }
+  /* 하위 선택자 */
+  ul {
+    padding-left: 20px;
+  }
+
+  /* 자식 선택자 */
+  > ul {
+    border: 1px solid red;
+  }
+}
+
+/* Sass 방식 중첩 */
+.menu {
+  background-color: #cff;
+
+  &__item {
+    color: red;
+  }
+
+  &__link {
+    background-color: yellow;
+  }
+
+  &--is-active {
+    border: 1px dotted red;
+  }
+}
+
+/* CSS 방식 중첩 */
+.menu {
+  background-color: #cff;
+
+  .menu__item {
+    color: red;
+  }
+
+  .menu__link {
+    background-color: yellow;
+  }
+
+  .menu--is-active {
+    border: 1px dotted red;
+  }
+}
