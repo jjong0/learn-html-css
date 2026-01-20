@@ -1,0 +1,34 @@
+/* 사용자 정의 속성 */
+:root {
+  --yellow: #ffc;
+  --pink: #fcf;
+
+  --main-color: var(--pink);
+}
+p {
+  margin-block: 10px;
+}
+
+/* CSS 변수 사용 */
+.like {
+  background: var(--primary-color, #ffc);
+}
+
+.lion {
+  --main-color: #cff;
+
+  background: var(--main-color);
+  background: var(--primary-color, var(--yellow));
+}
+
+.euid {
+  background: var(--main-color);
+}
+
+:root {
+  --main-color: #cfc;
+}
+
+.bootcamp {
+  background: var(--main-color);
+}
