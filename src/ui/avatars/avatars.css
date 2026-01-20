@@ -39,3 +39,16 @@
     }
   }
 }
+
+/* 레이아웃 */
+.avatars {
+  border: 1px solid currentColor;
+  display: flow-root;
+  padding: 10px 30px;
+  width: 398px;
+
+  .avatar {
+    float: left;
+    margin: 10px;
+  }
+}
