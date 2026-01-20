@@ -1,0 +1,58 @@
+.wrapper {
+  background: yellow;
+  border: 5px solid black;
+  display: flow-root;
+  /* float: left; */
+
+  div {
+    height: 50px;
+  }
+
+  .box1 {
+    background: skyblue;
+    float: left;
+    width: 100px;
+    height: 50px;
+    /* span 요소의 경우 float 속성의 값이 left로 지정되어 있기 때문에 display: inline을 추가로 지정해*/
+    display: inline;
+  }
+  .box2 {
+    background: salmon;
+    float: left;
+  }
+  .box3 {
+    background: pink;
+    float: left;
+    position: relative;
+    top: 20px;
+  }
+  .box4 {
+    background: limegreen;
+    float: left;
+  }
+}
+
+/* clear 속성 활용 예 */
+/* clear 속성은 block 서식에만 지정 가능 */
+.like {
+  background: #ffc;
+  clear: both;
+  margin-top: 100px;
+
+  img {
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* overflow 속성 */
+.lion {
+  background: #fcf;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+}
