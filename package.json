@@ -4,10 +4,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier . --check",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "webp": "simple-webp-converter"
   },
   "devDependencies": {
     "prettier": "^3.7.4",
+    "simple-webp-converter": "^1.0.3",
     "vite": "^7.3.0"
   }
 }
