@@ -1,3 +1,12 @@
+/* ul - body여백 */
+.m-50 {
+  margin: 50px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
 /* copy component */
 .ui-component {
   border: 1px solid black;
