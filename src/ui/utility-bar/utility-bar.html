@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유틸리티 바</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/utils/ui-component.css" />
+    <link rel="stylesheet" href="/src/ui/utility-bar/utility-bar.css" />
+    <script type="module" src="/src/ui/utils/ui-component.js"></script>
+  </head>
+  <body class="m-50">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>유틸리티 바</h1>
+    <hr />
+    <h2>컴포넌트</h2>
+    <h3>기본 링크</h3>
+    <div class="ui-component">
+      <a href="/">링크 텍스트</a>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h3>새창 링크</h3>
+    <div class="ui-component">
+      <a href="/" target="_blank">링크 텍스트</a>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h3>구분선</h3>
+    <div class="ui-component">
+      <span aria-hidden="true">:</span>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h2>레이아웃</h2>
+    <ul class="utility-bar">
+      <li>
+        <a href="/">홈</a>
+      </li>
+      <li>
+        <span aria-hidden="true">:</span>
+        <a href="/">로그인</a>
+      </li>
+      <li>
+        <span aria-hidden="true">:</span>
+        <a href="/">회원가입</a>
+      </li>
+      <li>
+        <span aria-hidden="true">:</span>
+        <a href="/">사이트맵</a>
+      </li>
+      <li>
+        <span aria-hidden="true">:</span>
+        <a href="/">english</a>
+      </li>
+    </ul>
+  </body>
+</html>
