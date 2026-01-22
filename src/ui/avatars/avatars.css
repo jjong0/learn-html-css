@@ -1,7 +1,7 @@
 /* 컴포넌트 */
 .avatar {
   --size: 64px;
-  --border-color: var(--white, #fff);
+  --border: var(--white, #fff);
   --online: var(--avatar-green, #03cc5c);
   --offline: var(--avatar-gray, #bcc3c7);
 
@@ -18,37 +18,65 @@
 
   .state {
     --size: 25%;
+
     position: absolute;
     right: 0;
     bottom: 0;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
   }
 
   &.online {
     .state {
-      background: var(--avatar-green);
+      background: var(--online);
     }
   }
 
   &.offline {
     .state {
-      background: var(--avatar-gray);
+      background: var(--offline);
     }
   }
 }
 
 /* 레이아웃 */
 .avatars {
-  border: 1px solid currentColor;
+  --avatar-size: 64px;
+  --avatar-margin: 10px;
+  --container-inline-padding: 30px;
+  --container-block-padding: 10px;
+  --count: 1;
+
+  /* 1개 아바타가 차지하는 공간 = 아바타 크기 + 좌우 마진 */
+  --avarta-width: calc(var(--avatar-size) + (var(--avatar-margin) * 2));
+
+  /* 전체 너비 = (아이템 공간 * 개수) + 컨테이너 좌우 패딩 */
+  --container-width: calc((var(--avarta-width) * var(--count)) + (var(--container-inline-padding) * 2));
+
   display: flow-root;
-  padding: 10px 30px;
-  width: 398px;
+  padding: var(--container-block-padding) var(--container-inline-padding);
+  width: var(--container-width);
+  box-shadow: 0 0 0 1px currentColor;
 
   .avatar {
+    --size: var(--avatar-size);
+
     float: left;
-    margin: 10px;
+    margin: var(--avatar-margin);
+  }
+}
+
+/* @media 규칙 */
+@media (width >= 400px) {
+  .avatars {
+    --count: 2;
+  }
+}
+
+@media (width >= 800px) {
+  .avatars {
+    --count: 4;
   }
 }
