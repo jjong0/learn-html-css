@@ -1,13 +1,12 @@
 /* 컴포넌트 */
 .term {
-  --text-color: #296897;
-  --base-text-size: 1rem;
+  --text-color: var(--terms-blue);
   --image-gap: 16px;
   --image-size: 60px;
   --figure-size: calc(var(--image-size) + var(--image-gap));
 
   line-height: 1.5;
-  font-size: var(--base-text-size, 16px);
+  display: flow-root;
 
   b {
     font-weight: 700;
@@ -20,7 +19,7 @@
 
   figure {
     float: left;
-    margin-right: var(--image-gap, 16px);
+    margin-right: var(--image-gap);
 
     img {
       width: var(--image-size);
