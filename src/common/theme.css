@@ -27,4 +27,10 @@
   --white: #fff;
   --avatar-green: #03cc5c;
   --avatar-gray: #bcc3c7;
+  /* Terms */
+  --terms-gray-500: #eeeeee;
+  --terms-gray-600: #cccccc;
+  --terms-gray-700: #a3a3a3;
+  --terms-gray-800: #7a7a7a;
+  --terms-blue: #296897;
 }

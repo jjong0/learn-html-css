@@ -32,3 +32,37 @@
     font-size: 0.875em;
   }
 }
+
+/* 레이아웃 */
+.terms {
+  --border-color: var(--terms-gray-700);
+  --start-color: var(--terms-gray-600);
+  --end-color: var(--terms-gray-500);
+
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(var(--start-color), var(--end-color));
+
+  .terms-heading {
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  .term {
+    margin-top: 12px;
+  }
+
+  .cross {
+    b {
+      float: left;
+    }
+
+    figure {
+      float: right;
+      margin-right: 0;
+      margin-left: var(--image-gap);
+    }
+  }
+}
