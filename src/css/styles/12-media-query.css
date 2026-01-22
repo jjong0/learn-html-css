@@ -1,0 +1,32 @@
+/* 공통 규칙 */
+body {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* @media 규칙 - 장치 명시 (screen) */
+@media screen and (min-width: 500px) {
+  body {
+    background: var(--pink);
+  }
+}
+
+/* @media 규칙 - 장치 생략 (screen) */
+@media (min-width: 500px) {
+  body {
+    background: var(--mint);
+  }
+}
+
+/* @media 규칙 - 범위 지정 */
+@media (width >= 500px) {
+  body {
+    background: var(--gray);
+  }
+}
+
+@media (800px >= width >= 500px) {
+  body {
+    background: var(--aqua);
+  }
+}
