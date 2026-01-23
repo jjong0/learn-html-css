@@ -1,0 +1,167 @@
+/* 플렉스 컨테이너 관련 속성 */
+.like {
+  background: var(--yellow);
+  /* 플렉스 컨테이너 */
+  display: flex;
+  /* 플렉스 아이템의 방향 */
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  flex-direction: row;
+  /* 플렉스 아이템의 줄바꿈 */
+  inline-size: 300px;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  /* 플렉스 아이템 방향과 플렉스 아이템 줄바꿈을 함께 지정할 수 있는 단축속성 */
+  flex-flow: row wrap;
+
+  block-size: 150px;
+  inline-size: 540px;
+  /* 메인축 정렬 */
+  justify-content: end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: start;
+  /* 교차축 정렬 */
+  align-items: stretch;
+  align-items: start;
+  align-items: end;
+  align-items: baseline;
+  align-items: center;
+
+  /* 여러줄 정렬 */
+  align-content: end;
+  align-content: center;
+  align-content: space-around;
+  align-content: space-between;
+  align-content: space-evenly;
+  align-content: start;
+
+  /* 갭 (아이템 사이 여백) */
+  row-gap: 30px;
+  column-gap: 50px;
+  gap: 20px;
+  gap: 20px 40px;
+
+  /* [class^='like'] {
+    background: var(--pink);
+  } */
+
+  > span {
+    background: var(--pink);
+    inline-size: 250px;
+  }
+
+  .like-item1,
+  .like-item4 {
+    font-size: 30px;
+  }
+
+  .like-item3 {
+    /* 아이템 단독 정렬 */
+    align-self: start;
+    align-self: end;
+    align-self: center;
+    align-self: stretch;
+  }
+}
+
+/* float을 활용한 컬럼  레이아웃 */
+.lion {
+  background: var(--yellow);
+  display: flow-root;
+  inline-size: 500px;
+  block-size: 50px;
+
+  > span {
+    background: var(--pink);
+    float: inline-start;
+    /* margin-inline: 19px; */
+
+    &:nth-child(n + 2) {
+      margin-inline-start: 38px;
+    }
+  }
+}
+
+/* 인라인 플렉스 예시 */
+.likelion {
+  background: red;
+  color: white;
+  padding: 10px;
+  /* 너비  / 높이 지정(논리속성) */
+  block-size: 80px;
+  /* display: inline-block;
+  align-content: center;
+  text-align: center; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* auto margin을 활용한 가운데 배치 */
+.euid {
+  background: var(--yellow);
+  inline-size: 500px;
+
+  > div {
+    inline-size: 400px;
+    margin-inline: auto;
+    background: var(--pink);
+  }
+}
+
+/* 플렉스 아이템 관련 속성 */
+.bootcamp {
+  background: var(--yellow);
+  inline-size: 500px;
+  block-size: 50px;
+  display: flex;
+  flex-flow: nowrap row;
+  column-gap: 20px;
+  box-shadow: 0 0 0 1px red;
+
+  > div {
+    background: var(--pink);
+    inline-size: 100px;
+    flex-basis: auto;
+    flex-basis: 0;
+    flex-basis: 100px;
+
+    &:nth-child(odd) {
+      background: var(--mint);
+      order: -1;
+      flex-grow: 1;
+      flex-grow: 0;
+      flex-shrink: 2;
+    }
+
+    &:nth-child(even) {
+      background: var(--lavender);
+      order: 1;
+      flex-grow: 2;
+      flex-grow: 0;
+      flex-shrink: 1;
+    }
+  }
+
+  /* flex 속성은 flex-grow, flex-shrink, flex-basis 단축 속성 */
+  .bootcamp-item1 {
+    flex: none !important;
+    /* flex-grow: 0, flex-shrink:0. flex-basis: auto */
+  }
+
+  .bootcamp-item2 {
+    /* flex-grow: 1, flex-shrink:1. flex-basis: 0 */
+
+    flex: 1 !important;
+  }
+
+  .bootcamp-item3 {
+    /* flex-grow: 0, flex-shrink:1. flex-basis: 0 */
+
+    flex: 0 !important;
+  }
+}
