@@ -1,0 +1,64 @@
+html,
+body {
+  block-size: 100%;
+}
+
+/* 플렉스 레이아웃 */
+/* 컨테이너 */
+.container {
+  background: var(--yellow);
+  block-size: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* 헤더 */
+.header {
+  background: var(--pink);
+  block-size: 50px;
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--mint);
+  block-size: 50px;
+}
+
+/* 메인 */
+.main {
+  background: var(--orange);
+  flex: 1;
+}
+
+/* 섹션 */
+.euid,
+.likelion {
+  background: var(--aqua);
+  block-size: 50%;
+}
+
+/* 사이드바 */
+.sidebar {
+  background: var(--lavender);
+  block-size: 100px;
+}
+
+/* 푸터 */
+.footer {
+  background: var(--gray);
+  block-size: 50px;
+}
+
+/* 미디어 쿼리 */
+@media (768px >= width >= 481px) {
+  .main {
+    display: flex;
+    flex-flow: nowrap row;
+
+    .euid,
+    .likelion {
+      flex: 1;
+      block-size: auto;
+    }
+  }
+}
