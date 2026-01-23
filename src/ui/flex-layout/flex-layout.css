@@ -54,6 +54,7 @@ body {
   .main {
     display: flex;
     flex-flow: nowrap row;
+    align-items: stretch;
 
     .euid,
     .likelion {
