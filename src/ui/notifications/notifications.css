@@ -69,13 +69,44 @@
   /* display: flex;
   flex-flow: nowrap column;
   row-gap: 16px; */
+  /* 최소크기가 동작하지 않음. 확인필요 */
+  /* min-width: 200px; */
+
+  /* 2단 레이아웃 768px 이상 */
+  /* @media (width >= 768px) {
+    flex-flow: wrap row;
+    column-gap: 20px;
+
+    .notification {
+      inline-size: calc(50% - 10px);
+    } */
 
   /* flex(row) 일 경우 1단 */
+  --spacing-y: 20px;
+
   display: flex;
   flex-flow: wrap row;
   row-gap: 16px;
 
+  /* 2단 */
+  @media (width >= 768px) {
+    column-gap: var(--spacing-y);
+  }
+  /* 4단 */
+  @media (width >= 1280px) {
+    flex-flow: nowrap;
+  }
+
   .notification {
     inline-size: 100%;
+
+    @media (width >= 768px) {
+      inline-size: calc(50% - var(--spacing-y) / 2);
+    }
+
+    @media (width >=1280px) {
+      inline-size: auto;
+      flex: 1;
+    }
   }
 }
