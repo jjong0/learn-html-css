@@ -1,0 +1,36 @@
+/* 컴포넌트 */
+.notification {
+  box-shadow: 0 0 0 1px red;
+  block-size: 100px;
+  display: flex;
+  flex-flow: wrap column;
+  padding: 20px;
+  /* 알림 아이콘 */
+  .notification-icon {
+    inline-size: 28px;
+    block-size: 28px;
+    margin-block: 16px;
+  }
+
+  /* 알림 제목 */
+  .notification-subject {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: green;
+  }
+
+  /* 알림 내용 */
+  p {
+    font-size: 16px;
+    color: silver;
+    line-height: 1.5;
+  }
+
+  /* 알림 시간 */
+  time {
+    font-size: 12px;
+    color: green;
+    line-height: 1.5;
+  }
+}
