@@ -61,3 +61,21 @@
     inset: 0 0 auto auto;
   }
 }
+
+/* 레이아웃 */
+.notifications {
+  box-shadow: 0 0 0 2px red;
+  /* flex (column)일 경우 1단 */
+  /* display: flex;
+  flex-flow: nowrap column;
+  row-gap: 16px; */
+
+  /* flex(row) 일 경우 1단 */
+  display: flex;
+  flex-flow: wrap row;
+  row-gap: 16px;
+
+  .notification {
+    inline-size: 100%;
+  }
+}
