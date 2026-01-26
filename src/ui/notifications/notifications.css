@@ -1,36 +1,63 @@
 /* 컴포넌트 */
 .notification {
-  box-shadow: 0 0 0 1px red;
-  block-size: 100px;
+  --black: #121212;
+  --green: #22be61;
+  --gray: #9b9a90;
+  --white: #fff;
+
+  --point-color: var(--green);
+  --text-color: var(--gray);
+  --bg-color: var(--white);
+  --border-color: var(--gray);
+  --icon-size: 28px;
+  --spacing: 20px;
+
+  line-height: 1.5;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   display: flex;
-  flex-flow: wrap column;
-  padding: 20px;
+  flex-flow: nowrap row;
+  padding: var(--spacing);
+  column-gap: var(--spacing);
+  align-items: center;
+
   /* 알림 아이콘 */
   .notification-icon {
-    inline-size: 28px;
-    block-size: 28px;
-    margin-block: 16px;
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+  /* 알림 콘텐츠 영역 */
+  .notification-content {
+    position: relative;
+
+    flex: 1;
+    /* flex-grow:1 , flex-shrink:1, flex-basis: 0 */
   }
 
   /* 알림 제목 */
   .notification-subject {
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 700;
-    line-height: 1.5;
-    color: green;
+    color: var(--point-color);
   }
 
   /* 알림 내용 */
   p {
-    font-size: 16px;
-    color: silver;
-    line-height: 1.5;
+    font-size: 0.875em;
+    color: var(--text-color);
   }
 
   /* 알림 시간 */
   time {
-    font-size: 12px;
-    color: green;
-    line-height: 1.5;
+    font-size: 0.75em;
+    color: var(--point-color);
+
+    position: absolute;
+    inset: 0 0 auto auto;
   }
 }
