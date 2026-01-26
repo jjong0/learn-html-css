@@ -1,0 +1,6 @@
+/* 컴포넌트 */
+.logo {
+  inline-size: 24px;
+  aspect-ratio: 1/1;
+  display: block;
+}
