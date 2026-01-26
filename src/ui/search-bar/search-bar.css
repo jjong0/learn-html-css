@@ -1,6 +1,39 @@
 /* 컴포넌트 */
+/* 로고 */
 .logo {
   inline-size: 24px;
   aspect-ratio: 1/1;
   display: block;
+}
+
+/* 입력 서식 */
+.form-input {
+  input {
+    inline-size: 100%;
+    block-size: 28px;
+    font-size: 0.875em;
+    padding: 2px 0.5em;
+  }
+}
+
+/* 검색 버튼 */
+.button-circle {
+  background: green;
+  inline-size: 24px;
+  aspect-ratio: 1/1;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inline-size: 50%;
+    aspect-ratio: 1/1;
+    background: #fff;
+    border-radius: 50%;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+  }
 }
