@@ -1,5 +1,42 @@
-/* 컴포넌트 */
-/* 로고 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+:root {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  --start-color: var(--green-200);
+  --end-color: var(--green-300);
+} /* 컴포넌트 */
+/* 텍스트 로고 */
+.text-logo {
+  --text-size: 34.7504px;
+
+  display: inline-flex;
+  flex-flow: nowrap row;
+  justify-content: center;
+  align-items: start;
+  inline-size: calc(var(--text-size) * 0.7);
+
+  .text {
+    font-size: var(--text-size);
+    font-weight: 900;
+    line-height: 0.7;
+    inline-size: 100%;
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+    background-image: linear-gradient(to bottom, var(--start-color), var(--end-color));
+    background-clip: text;
+    color: transparent;
+  }
+}
+/* SVG로고 */
 .logo {
   inline-size: 24px;
   aspect-ratio: 1/1;
