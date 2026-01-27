@@ -34,9 +34,8 @@
   /* 알림 콘텐츠 영역 */
   .notification-content {
     position: relative;
-
+    /* flex-grow: 1 , flex-shrink: 1 , flex-basis: 0 */
     flex: 1;
-    /* flex-grow:1 , flex-shrink:1, flex-basis: 0 */
   }
 
   /* 알림 제목 */
@@ -56,55 +55,60 @@
   time {
     font-size: 0.75em;
     color: var(--point-color);
-
     position: absolute;
     inset: 0 0 auto auto;
   }
 }
 
 /* 레이아웃 */
-.notifications {
+/* flex (column) 일 경우 - 1단 */
+/* 최소 크기가 동작하지 않음. 확인 필요 */
+/* min-width: 200px; */
+/* width: clamp(200px, 10vw, 400px); */
+/* .notifications {
   box-shadow: 0 0 0 2px red;
-  /* flex (column)일 경우 1단 */
-  /* display: flex;
+  display: flex;
   flex-flow: nowrap column;
-  row-gap: 16px; */
-  /* 최소크기가 동작하지 않음. 확인필요 */
-  /* min-width: 200px; */
+  row-gap: 16px;
 
-  /* 2단 레이아웃 768px 이상 */
-  /* @media (width >= 768px) {
+  @media (width>= 768px) {
     flex-flow: wrap row;
     column-gap: 20px;
 
     .notification {
       inline-size: calc(50% - 10px);
-    } */
+    }
+  }
+} */
 
-  /* flex(row) 일 경우 1단 */
+/* flex (row) 일 경우 - 1단 */
+.notifications {
   --spacing-y: 20px;
 
+  box-shadow: 0 0 0 2px red;
   display: flex;
   flex-flow: wrap row;
   row-gap: 16px;
+  min-inline-size: 200px;
 
-  /* 2단 */
-  @media (width >= 768px) {
+  @media (width>= 768px) {
     column-gap: var(--spacing-y);
   }
-  /* 4단 */
-  @media (width >= 1280px) {
-    flex-flow: nowrap;
+
+  @media (width>= 1280px) {
+    flex-wrap: nowrap;
   }
 
   .notification {
     inline-size: 100%;
 
-    @media (width >= 768px) {
-      inline-size: calc(50% - var(--spacing-y) / 2);
+    /* 2단 */
+    @media (width>= 768px) {
+      inline-size: calc(50% - (var(--spacing-y) / 2));
     }
 
-    @media (width >=1280px) {
+    /* 4단 */
+    @media (width>= 1280px) {
       inline-size: auto;
       flex: 1;
     }
