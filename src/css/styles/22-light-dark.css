@@ -1,0 +1,21 @@
+:root {
+  color-scheme: light dark;
+  --white: #fff;
+  --black: #000;
+}
+
+/* 라이트 모드 - 기본 */
+body {
+  background: #eee;
+  color: #121212;
+
+  /* 다크 모드 */
+  @media (prefers-color-scheme: dark) {
+    background: #121212;
+    color: #eee;
+  }
+}
+
+p {
+  color: light-dark(var(--black), var(--white));
+}
