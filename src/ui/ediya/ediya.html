@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이디야</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/utils/ui-component.css" />
+    <link rel="stylesheet" href="/src/ui/ediya/ediya.css" />
+    <script type="module" src="/src/ui/utils/ui-component.js"></script>
+  </head>
+  <body class="m-50">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>이디야</h1>
+    <hr />
+    <h2>컴포넌트</h2>
+    <strong>이디야 영상</strong>
+    <div class="ui-component">
+      <div class="youtube">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/UGPo0RqhbKU?si=pvP8QX8C5QfqnV7-"
+          aria-label="이디야 고객 감사 영상"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h2>레이아웃</h2>
+    <strong class="sr-only">공지사항</strong>
+    <section class="notice">
+      <div class="notice-headline-wrapper">
+        <h2 class="notice-headline">notice</h2>
+        <div class="button-group">
+          <button type="button" aria-label="이전 공지사항 보기">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="15" height="15" stroke="currentColor" />
+              <path d="M9.25 10.5L6.75 8L9.25 5.5" stroke="currentColor" />
+            </svg>
+          </button>
+          <button type="button" aria-label="다음 공지사항 보기">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="-0.5" y="0.5" width="15" height="15" transform="matrix(-1 0 0 1 15 0)" stroke="currentColor" />
+              <path d="M6.75 10.5L9.25 8L6.75 5.5" stroke="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <article class="notice-item">
+        <h3 class="notice-item-headline">이디야멤버스가 새로워집니다.</h3>
+        <time class="notice-item-date" datetime="2026-01-27T15:05:07">2026-01-27</time>
+        <p class="notice-item-description">이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제, 이디야카드, 스마트...</p>
+      </article>
+    </section>
+  </body>
+</html>
