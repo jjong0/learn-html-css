@@ -39,6 +39,7 @@
     /* 글자 색상을 투명하게 설정하여 텍스트 뒤쪽 그라디언트 색상이 보이도록 하기 */
     color: transparent;
     /* 텍스트 위치를 X축으로 -2px 이동 */
+    /* translate 속성으로 사용 (transform 속성에서 함수로도 사용 할 수 있음) */
     translate: -2px 0;
   }
 }
@@ -49,19 +50,39 @@
   display: block;
 }
 
-/* 입력 서식 */
 .form-input {
-  input {
+  input[type='search'] {
+    min-inline-size: 0;
     inline-size: 100%;
     block-size: 28px;
     font-size: 0.875em;
     padding: 2px 0.5em;
+    border: 1px solid var(--gray-300);
+
+    /* WCAG - focus */
+    &:focus {
+      outline: 2px solid var(--green-300);
+      outline-offset: 2px;
+    }
+
+    /* 읽기 전용 상태 디자인 */
+    &:read-only,
+    &[read-only] {
+      background: var(--gray-100);
+    }
+
+    /* 비활성화 상태 디자인 */
+    &:disabled,
+    &[disabled] {
+      background: var(--gray-100);
+      color: red;
+    }
   }
 }
 
 /* 검색 버튼 */
 .button-circle {
-  background: green;
+  background: var(--green-100) linear-gradient(var(--start-color), var(--end-color));
   inline-size: 24px;
   aspect-ratio: 1/1;
   border: 0;
@@ -72,11 +93,12 @@
   &::before {
     content: '';
     position: absolute;
-    inline-size: 50%;
+    inline-size: 30%;
     aspect-ratio: 1/1;
     background: #fff;
     border-radius: 50%;
     inset: 50% auto auto 50%;
+    /* transform 속성에서 translate를 함수로 사용 */
     transform: translate(-50%, -50%);
   }
 }
