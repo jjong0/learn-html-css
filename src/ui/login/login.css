@@ -1,15 +1,22 @@
 :root {
+  --white: #fff;
   --green-100: #03cc5c;
   --green-200: #1bf008;
   --green-300: #03cca8;
+
+  --blue-100: #e9f0fd;
+  --red-100: #ff1414;
 
   --gray-100: #bcc3c7;
   --gray-200: #9b9a90;
   --gray-300: #6d7478;
 
+  --primary-color: var(--green-100);
   --start-color: var(--green-200);
   --end-color: var(--green-300);
+  --active-color: var(--blue-100);
 }
+
 /* 컴포넌트 */
 /* SVG 로고 */
 .go-home {
@@ -35,16 +42,17 @@
 
     &:focus {
       border-color: var(--green-100);
-      background: var(#e9f0fd);
+      background: #e9f0fd;
     }
   }
 
   .error-message {
-    color: red;
+    color: var(--red-100);
     font-size: 12px;
     margin-block-start: 8px;
     display: none;
   }
+
   input:user-invalid + .error-message {
     display: block;
   }
@@ -58,15 +66,123 @@
 
   &.button-fill {
     background: var(--green-100);
-    color: white;
+    color: var(--white);
 
-    &.disabled {
-      background: var(--gray-300);
+    &:disabled {
+      background: var(--gray-100);
     }
   }
 
   &.button-outline {
     color: var(--green-100);
     border: 1px solid currentColor;
+
+    &:disabled {
+      color: var(--gray-300);
+    }
+  }
+}
+
+/* 체크박스 */
+.form-checkbox {
+  --size: 24px;
+
+  display: inline-flex;
+  flex-flow: nowrap row;
+  position: relative;
+  font-size: 14px;
+
+  input {
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 0;
+    inline-size: var(--size);
+    block-size: var(--size);
+    appearance: none;
+  }
+
+  label {
+    block-size: var(--size);
+    align-content: center;
+  }
+}
+
+/* 배경 이미지 */
+.form-checkbox {
+  .bg-icon {
+    background: url(/src/assets/naver/unchecked.svg) no-repeat;
+    padding-inline-start: 28px;
+  }
+
+  input:checked + .bg-icon {
+    background-image: url(/src/assets/naver/checked.svg);
+  }
+}
+
+/* SVG 요소 */
+.form-checkbox {
+  align-items: center;
+  column-gap: 4px;
+
+  .svg-icon {
+    display: contents;
+    svg {
+      inline-size: var(--size);
+      block-size: var(--size);
+    }
+  }
+
+  input:checked + .svg-icon {
+    .area {
+      fill: var(--green-100);
+    }
+    .border {
+      fill: var(--green-100);
+    }
+    .mark {
+      fill: var(--white);
+    }
+  }
+}
+
+/* 링크 텍스트 */
+
+.new-window-link {
+  font-size: 14px;
+}
+
+/* 스위치 */
+.form-switch {
+  --size: 24px;
+  font-size: 14px;
+  position: relative;
+  display: inline-flex;
+  flex-flow: nowrap row;
+  block-size: var(--size);
+  align-items: center;
+
+  input {
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    appearance: none;
+  }
+
+  label {
+    inline-size: 2.5em;
+    text-align: right;
+    font-weight: 700;
+  }
+
+  label::after {
+    content: 'OFF';
+    color: var(--gray-300);
+  }
+
+  input:checked + label::after {
+    content: 'ON';
+    color: var(--green-100);
   }
 }
