@@ -1,0 +1,7 @@
+/* 콤보박스 */
+.combo-box {
+  svg {
+    inline-size: 16px;
+    block-size: 16px;
+  }
+}
