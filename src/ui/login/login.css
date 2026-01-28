@@ -49,3 +49,24 @@
     display: block;
   }
 }
+
+/* 버튼 */
+.button {
+  border: 0;
+  padding: 8px 16px;
+  background: transparent;
+
+  &.button-fill {
+    background: var(--green-100);
+    color: white;
+
+    &.disabled {
+      background: var(--gray-300);
+    }
+  }
+
+  &.button-outline {
+    color: var(--green-100);
+    border: 1px solid currentColor;
+  }
+}
