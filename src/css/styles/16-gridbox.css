@@ -1,0 +1,62 @@
+/* 그리드 셀 배경 색상 */
+.like,
+.lion,
+.euid,
+.bootcamp,
+.frontend {
+  > div:nth-child(1) {
+    background: var(--pink);
+  }
+  > div:nth-child(2) {
+    background: var(--blue);
+  }
+  > div:nth-child(3) {
+    background: var(--coral);
+  }
+  > div:nth-child(4) {
+    background: var(--green);
+  }
+  > div:nth-child(5) {
+    background: var(--purple);
+  }
+  > div:nth-child(6) {
+    background: var(--gray);
+  }
+  > div:nth-child(7) {
+    background: var(--apricot);
+  }
+}
+
+/* grid 컨테이너 설정 */
+/* grid-template 설정 열과 행 */
+.like {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 50px 50px;
+}
+
+/* 그리드 아이템 배치 -  라인기반*/
+/* 다양한 단위를 사용하여 트랙 설정 */
+.lion {
+  font-size: 10px;
+  box-shadow: 0 0 0 2px red;
+  display: grid;
+  grid-template-columns: 50px 10rem 20% 10em 1fr;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+
+  .lion1 {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    grid-row-end: 5;
+    grid-column-end: 5;
+    /* 단축속성 */
+    grid-row: 4/5;
+    grid-column: 4/5;
+    /* 단축의 단축속성 */
+    grid-area: 4/4/5/5;
+  }
+
+  .lion2 {
+    grid-area: 4/1/6/3;
+  }
+}
