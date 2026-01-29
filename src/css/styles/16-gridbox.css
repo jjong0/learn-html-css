@@ -39,10 +39,10 @@
 /* 다양한 단위를 사용하여 트랙 설정 */
 .lion {
   font-size: 10px;
-  box-shadow: 0 0 0 2px red;
+
   display: grid;
-  grid-template-columns: 50px 10rem 20% 10em 1fr;
-  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-columns: 50px 10rem 20% 1fr;
+  grid-template-rows: 50px 50px 50px 50px;
 
   .lion1 {
     grid-row-start: 4;
@@ -54,9 +54,50 @@
     grid-column: 4/5;
     /* 단축의 단축속성 */
     grid-area: 4/4/5/5;
+    grid-area: 1/1/4/4;
+  }
+
+  /* span 키워드 활용 */
+  .lion1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 3;
   }
 
   .lion2 {
-    grid-area: 4/1/6/3;
+    grid-row-start: 4;
+    grid-column-start: 4;
   }
+
+  .lion3 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+  }
+
+  .lion4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+
+  .lion5 {
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 2;
+  }
+
+  .lion6 {
+    grid-row: 2 / span 2;
+    grid-column-start: 4;
+  }
+
+  .lion7 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+  }
+}
+
+/* repeat 함수 활용 */
+.euid {
+  display: grid;
+  box-shadow: 0 0 0 2px red;
+  grid-template-columns: repeat(2, 1fr 2fr);
+  grid-template-rows: repeat(5, 50px);
 }
