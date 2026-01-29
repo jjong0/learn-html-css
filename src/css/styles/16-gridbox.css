@@ -3,7 +3,8 @@
 .lion,
 .euid,
 .bootcamp,
-.frontend {
+.frontend,
+.school {
   > div:nth-child(1) {
     background: var(--pink);
   }
@@ -29,10 +30,41 @@
 
 /* grid 컨테이너 설정 */
 /* grid-template 설정 열과 행 */
+/* 정렬 - justify-contend / align-content */
 .like {
+  inline-size: 300px;
+  block-size: 300px;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 50px 50px;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: auto auto auto auto auto;
+  justify-content: space-between;
+  align-content: stretch;
+  /* justify-contend / align-content 함께 지정 */
+  place-content: stretch space-between;
+}
+
+/* 정렬 - justify-items / align-items */
+/* 정렬 - justify-self / align-self */
+.school {
+  box-shadow: 0 0 0 2px red;
+  inline-size: 300px;
+  block-size: 300px;
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: auto auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+  /* justify-items / align-items를 함께 지정 */
+  place-items: center;
+
+  .school6 {
+    place-self: start end;
+  }
+
+  .school7 {
+    justify-self: end;
+    align-self: end;
+  }
 }
 
 /* 그리드 아이템 배치 -  라인기반*/
