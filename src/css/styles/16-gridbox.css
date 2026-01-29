@@ -31,6 +31,7 @@
 /* grid 컨테이너 설정 */
 /* grid-template 설정 열과 행 */
 /* 정렬 - justify-contend / align-content */
+/* dense를 활용하여 밀집 배치 */
 .like {
   inline-size: 300px;
   block-size: 300px;
@@ -41,12 +42,18 @@
   align-content: stretch;
   /* justify-contend / align-content 함께 지정 */
   place-content: stretch space-between;
+
+  grid-auto-flow: dense;
+
+  > div:nth-child(odd),
+  .like2 {
+    grid-column: span 2;
+  }
 }
 
 /* 정렬 - justify-items / align-items */
 /* 정렬 - justify-self / align-self */
 .school {
-  box-shadow: 0 0 0 2px red;
   inline-size: 300px;
   block-size: 300px;
   display: grid;
@@ -189,4 +196,12 @@
   .bootcamp4 {
     grid-column: content-start / full-end;
   }
+}
+
+/* auto-fill/ auto fit */
+.frontend {
+  box-shadow: 0 0 0 2px red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 50px;
 }
