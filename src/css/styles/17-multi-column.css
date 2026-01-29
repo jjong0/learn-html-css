@@ -1,0 +1,25 @@
+/* 다단 갯수 - column-count */
+/* 단 구분선 - column-rule */
+/* 단 사이 여백 - column-gap */
+.like {
+  background: var(--mint);
+  column-count: 2;
+  column-rule: 3px double red;
+  column-gap: 40px;
+}
+
+/* 단 너비 - column-width */
+/* 단 전체 사용 - column-span: all */
+.lion {
+  background: var(--pink);
+  column-width: 150px;
+
+  span {
+    display: block;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 10px;
+    font-size: 20px;
+    column-span: all;
+  }
+}
