@@ -1,0 +1,119 @@
+html,
+body {
+  min-block-size: 100%;
+}
+
+.container {
+  box-shadow: 0 0 0 2px red;
+  block-size: calc(100vh - 150px);
+  display: grid;
+
+  @media (width <= 768px) {
+    display: flex;
+    flex-flow: nowrap column;
+  }
+
+  @media (width >= 768px) {
+    display: grid;
+    grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(34px, 76px)) [content-end] 1fr [full-end];
+    column-gap: 20px;
+  }
+}
+
+/* 헤더 */
+.header {
+  background: var(--yellow);
+  block-size: 10%;
+
+  @media (width >= 768px) {
+    grid-column: content;
+    block-size: auto;
+  }
+}
+.navigation {
+  background: var(--pink);
+  block-size: 10%;
+
+  @media (width >= 768px) {
+    grid-column: full;
+    block-size: auto;
+  }
+}
+
+/* 내비게이션 */
+
+/* 메인 */
+.main {
+  @media (width <= 768px) {
+    flex: 1;
+    display: flex;
+    flex-flow: wrap row;
+
+    .book,
+    .news,
+    .board,
+    .favorite,
+    .twitter {
+      inline-size: 100%;
+    }
+  }
+
+  @media (width >=768px) {
+    display: contents;
+  }
+}
+/* 추천서적 */
+.book {
+  background: var(--mint);
+
+  @media (width >= 768px) {
+    grid-column: content-start / span 4;
+  }
+}
+
+/* 새소식 */
+.news {
+  background: var(--orange);
+
+  @media (width >= 768px) {
+    grid-column: span 8;
+  }
+}
+
+/* 게시판 */
+.board {
+  background: var(--gray);
+
+  @media (width >= 768px) {
+    grid-column: content-start / span 4;
+  }
+}
+/* 인기사이트 */
+.favorite {
+  background: var(--purple);
+
+  @media (width >= 768px) {
+    order: 1;
+    grid-column: span 3;
+  }
+}
+/* 트위터 */
+.twitter {
+  background: var(--teal);
+
+  @media (width >= 768px) {
+    grid-column: span 5;
+  }
+}
+
+/* 푸터 */
+.footer {
+  background: var(--yellow);
+  block-size: 10%;
+
+  @media (width >= 768px) {
+    grid-column: full;
+    order: 1;
+    block-size: auto;
+  }
+}
