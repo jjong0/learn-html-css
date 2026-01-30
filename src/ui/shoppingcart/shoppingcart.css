@@ -7,3 +7,23 @@
 body {
   font-family: 'Pretendard Variable', Pretendard, sans-serif;
 }
+
+/* 컴포넌트 */
+/* 장바구니 헤더 */
+.shopping-cart-title {
+  --border-size: 2px;
+  --size: 24px;
+  --spacing: 0.25em;
+  --icon-size: 2em;
+
+  display: block;
+  background: url(/src/assets/cart/icon-cart.svg) no-repeat;
+  font-size: var(--size);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  padding-inline-start: var(--icon-size);
+  padding-block-start: calc(var(--spacing) * 2);
+  height: calc(var(--icon-size) + var(--spacing) + var(--border-size));
+  border-block-end: var(--border-size) solid currentColor;
+  font-weight: 700;
+}
