@@ -57,6 +57,66 @@ body {
   }
 }
 
+/* 상품 수량 선택 버튼 */
+.button-product-quantity {
+  --size: 28px;
+  --spacing-x: 8px;
+  --spacing-y: 6px;
+  --fill-color: var(--gray-100);
+  --strocke-color: var(--gray-200);
+
+  background: var(--gray-100);
+  display: inline-grid;
+  grid-template-columns: repeat(3, max-content);
+  padding: var(--spacing-y) var(--spacing-x);
+  align-items: center;
+  border-radius: 36px;
+
+  .button-increase {
+    order: 1;
+  }
+
+  .button-increase,
+  .button-decrease {
+    inline-size: var(--size);
+    aspect-ratio: 1/1;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    display: inline-grid;
+    place-items: center;
+
+    &::before {
+      content: '';
+      inline-size: 6px;
+      block-size: 1px;
+      background: var(--gray-200);
+      grid-area: 1/1/2/2;
+    }
+  }
+
+  .button-increase {
+    &::after {
+      content: '';
+      display: block;
+      inline-size: 6px;
+      block-size: 1px;
+      background: var(--gray-200);
+      margin-inline: auto;
+      rotate: 90deg;
+      grid-area: 1/1/2/2;
+    }
+  }
+
+  output {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    padding-inline: 4px;
+  }
+}
+
 /* 장바구니 푸터 */
 .shopping-cart-result {
   --border-size: 2px;
