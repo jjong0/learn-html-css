@@ -146,3 +146,20 @@ body {
     grid-column: 3/4;
   }
 }
+
+/* 레이아웃 */
+.shopping-cart {
+  /* 상품목록 */
+  .shopping-cart-products {
+    min-inline-size: max-content;
+
+    li {
+      margin-block: 20px;
+      display: flex;
+      flex-flow: nowrap row;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+    }
+  }
+}
