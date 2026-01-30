@@ -27,3 +27,62 @@ body {
   border-block-end: var(--border-size) solid currentColor;
   font-weight: 700;
 }
+
+/* 장바구니 상품 */
+.shopping-cart-product {
+  --size: 64px;
+
+  display: grid;
+  grid-template-columns: 64px minmax(max-content, 1fr);
+  column-gap: 12px;
+  align-items: center;
+
+  img {
+    inline-size: var(--size);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  figcaption {
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap: 8px;
+    a {
+      font-size: 20px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+}
+
+/* 장바구니 푸터 */
+.shopping-cart-result {
+  --border-size: 2px;
+  --size: 20px;
+  --spacing: 1em;
+
+  min-inline-size: max-content;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, max-content);
+
+  font-weight: 700;
+  font-size: var(--size);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  padding-block-start: var(--spacing);
+  border-block-start: var(--border-size) solid currentColor;
+
+  [aria-hidden='true'] {
+    margin-inline: 0.125em;
+  }
+
+  em {
+    grid-column: 2/3;
+  }
+
+  output {
+    grid-column: 3/4;
+  }
+}
