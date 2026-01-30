@@ -1,0 +1,38 @@
+/* 컴포넌트 */
+/* 카드 */
+.card {
+  border: 1px solid #999;
+  padding: 20px;
+  display: grid;
+  row-gap: 20px;
+  box-shadow: 4px 4px 2px 0 #777;
+
+  h2 {
+    color: #296897;
+    font-size: 30px;
+  }
+
+  figure {
+    inline-size: 100%;
+    aspect-ratio: 2/1;
+
+    img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: 0 20%;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    background: #296897;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    place-self: center end;
+  }
+}
