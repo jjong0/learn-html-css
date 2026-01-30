@@ -84,7 +84,6 @@
 /* 인터렉션이 없는 경우 */
 /* 컴포넌트 */
 .profile {
-  /* margin-block-end: 50px; */
   display: inline-grid;
   inline-size: 64px;
   block-size: 64px;
@@ -111,5 +110,26 @@
       justify-self: end;
       place-self: end;
     }
+  }
+}
+
+/* 레이아웃 */
+/* grid를 이용한 레이아웃 */
+.profiles {
+  --columns: 1;
+
+  border: 1px solid gray;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 64px);
+  gap: 20px;
+  inline-size: max-content;
+
+  @media (width >= 400px) {
+    --columns: 2;
+  }
+
+  @media (width >= 600px) {
+    --columns: 4;
   }
 }
