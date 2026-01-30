@@ -13,9 +13,6 @@
   }
 
   figure {
-    inline-size: 100%;
-    aspect-ratio: 2/1;
-
     img {
       inline-size: 100%;
       block-size: 100%;
@@ -34,5 +31,20 @@
     padding: 10px 20px;
     border-radius: 4px;
     place-self: center end;
+  }
+}
+
+/* 레이아웃 */
+
+.cards {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+
+  .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
   }
 }
