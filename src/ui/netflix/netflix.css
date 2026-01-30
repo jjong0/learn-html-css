@@ -160,6 +160,13 @@
   }
 }
 
+/* 로고 */
+.brand {
+  display: block;
+  inline-size: 140px;
+  block-size: 38px;
+}
+
 /* 헤더 레이아웃 */
 .netflix-header {
   background: #000;
@@ -170,9 +177,6 @@
 
   /* 로고 */
   .brand {
-    display: block;
-    inline-size: 140px;
-    block-size: 38px;
     grid-column: span 2;
     place-self: center;
   }
