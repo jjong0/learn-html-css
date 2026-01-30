@@ -1,3 +1,24 @@
+:root {
+  --red-100: #faced0;
+  --red-200: #f59da1;
+  --red-300: #ef6b72;
+  --red-400: #ea3a43;
+  --red-500: #e50914;
+  --red-600: #b70710;
+  --red-700: #89050c;
+  --red-800: #5c0408;
+  --red-900: #2e0204;
+  --green-100: #d5f8e3;
+  --green-200: #acf2c8;
+  --green-300: #82ebac;
+  --green-400: #58e590;
+  --green-500: #2ede75;
+  --green-600: #25b25d;
+  --green-700: #1c8546;
+  --green-800: #13592f;
+  --green-900: #092c17;
+}
+
 /* 콤보박스 */
 .combo-box {
   position: relative;
@@ -112,8 +133,63 @@
   }
 
   select {
-    appearance: none;
+    background: transparent;
     border: 0;
     padding-inline: 24px;
+  }
+}
+
+/* 버튼스타일 */
+.button {
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: transparent;
+
+  &.button-fill {
+    background: var(--red-500);
+    color: white;
+
+    &:disabled {
+      background: #999;
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--green-500);
+  }
+}
+
+/* 헤더 레이아웃 */
+.netflix-header {
+  background: #000;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(100px, 1fr));
+  gap: 20px;
+
+  /* 로고 */
+  .brand {
+    display: block;
+    inline-size: 140px;
+    block-size: 38px;
+    grid-column: span 2;
+    place-self: center;
+  }
+
+  /* 콤보박스 */
+  .select-box {
+    grid-column: 11/12;
+    justify-self: center end;
+
+    select {
+      color: #eee;
+    }
+  }
+
+  /* 로그인 버튼 */
+  .button {
+    grid-column: 12 / 13;
+    place-self: center start;
   }
 }
