@@ -82,3 +82,38 @@
 .free-button:hover {
   background-color: #f40612;
 }
+
+/* 셀렉트 박스 */
+/* inline-grid를 활용한 레이아웃 */
+.select-box {
+  border: 2px solid #999;
+  border-radius: 4px;
+  padding: 10px;
+  display: inline-grid;
+
+  svg,
+  select {
+    grid-area: 1/1/2/2;
+  }
+
+  svg {
+    pointer-events: none;
+    z-index: 1;
+    inline-size: 16px;
+    block-size: 16px;
+
+    &.icon-global {
+      place-self: center start;
+    }
+
+    &.icon-triangle {
+      place-self: center end;
+    }
+  }
+
+  select {
+    appearance: none;
+    border: 0;
+    padding-inline: 24px;
+  }
+}
