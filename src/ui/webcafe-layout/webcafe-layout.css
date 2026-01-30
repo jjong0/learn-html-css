@@ -8,14 +8,13 @@ body {
 .container {
   box-shadow: 0 0 0 2px red;
   block-size: calc(100vh - 150px);
-  display: grid;
 
-  @media (width <= 768px) {
+  @media (width<=768px) {
     display: flex;
     flex-flow: nowrap column;
   }
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     display: grid;
     grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(34px, 76px)) [content-end] 1fr [full-end];
     column-gap: 20px;
@@ -24,29 +23,52 @@ body {
 
 /* 헤더 */
 .header {
-  background: var(--yellow);
-  block-size: 10%;
+  background: var(--black);
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     grid-column: content;
     block-size: auto;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+  }
+
+  .brand {
+    @media (width>=768px) {
+      grid-column: span 2;
+      justify-self: center;
+    }
+  }
+
+  .select-box {
+    @media (width>=768px) {
+      grid-column: 9 / span 2;
+      justify-self: end;
+    }
+  }
+
+  .button {
+    @media (width>=768px) {
+      grid-column: span 2 / content-end;
+      justify-self: start;
+    }
   }
 }
+
+/* 내비게이션 */
 .navigation {
   background: var(--pink);
   block-size: 10%;
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     grid-column: full;
     block-size: auto;
   }
 }
 
-/* 내비게이션 */
-
 /* 메인 */
 .main {
-  @media (width <= 768px) {
+  @media (width<=768px) {
     flex: 1;
     display: flex;
     flex-flow: wrap row;
@@ -60,15 +82,15 @@ body {
     }
   }
 
-  @media (width >=768px) {
+  @media (width>=768px) {
     display: contents;
   }
 }
-/* 추천서적 */
+/* 추천 서적 */
 .book {
   background: var(--mint);
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     grid-column: content-start / span 4;
   }
 }
@@ -77,7 +99,7 @@ body {
 .news {
   background: var(--orange);
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     grid-column: span 8;
   }
 }
@@ -86,24 +108,26 @@ body {
 .board {
   background: var(--gray);
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     grid-column: content-start / span 4;
   }
 }
+
 /* 인기사이트 */
 .favorite {
   background: var(--purple);
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     order: 1;
     grid-column: span 3;
   }
 }
+
 /* 트위터 */
 .twitter {
   background: var(--teal);
 
-  @media (width >= 768px) {
+  @media (width>=768px) {
     grid-column: span 5;
   }
 }
@@ -113,9 +137,9 @@ body {
   background: var(--yellow);
   block-size: 10%;
 
-  @media (width >= 768px) {
-    grid-column: full;
+  @media (width>=768px) {
     order: 1;
+    grid-column: full;
     block-size: auto;
   }
 }
