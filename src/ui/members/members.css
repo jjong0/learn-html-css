@@ -1,0 +1,75 @@
+/* 스크롤바 커스텀 */
+.members-wrapper {
+  /* Webkit 기반 브라우저 (크롬, 엣지, 사파리) */
+  &::-webkit-scrollbar {
+    width: 10px;
+    background: var(--gray, #e0e0e0);
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--black, #222);
+    border-radius: 8px;
+    border: 2px solid var(--gray, #e0e0e0);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--gray, #e0e0e0);
+    border-radius: 8px;
+  }
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--black, #222) var(--gray, #e0e0e0);
+}
+/* 테이블 스타일링 */
+.members-wrapper {
+  block-size: 500px;
+  overflow: auto;
+
+  .members {
+    inline-size: 100%;
+    border: 1px solid var(--black);
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    .number {
+      inline-size: 10%;
+    }
+
+    .name {
+      inline-size: 20%;
+    }
+
+    .email {
+      inline-size: 40%;
+    }
+
+    .phone {
+      inline-size: 30%;
+    }
+
+    thead tr,
+    tfoot tr {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    thead tr {
+      position: sticky;
+      inset-block-start: 0;
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--gray);
+    }
+
+    th,
+    td {
+      padding: 1em;
+      text-align: center;
+    }
+
+    th {
+      white-space: nowrap;
+    }
+  }
+}
