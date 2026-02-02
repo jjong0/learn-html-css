@@ -1,3 +1,9 @@
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
 /* 공통 스타일 */
 .container {
   display: grid;
@@ -36,10 +42,11 @@
     background: var(--yellow);
     font-size: 1.5em;
     font-weight: 700;
-    animation-play-state: paused;
+    animation-play-state: var(--play-state, paused);
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
+    --play-state: paused;
   }
 }
 
@@ -76,9 +83,12 @@
   animation-timing-function: linear;
 }
 
-/* angle */
+/* Angle */
 .angle.target-animation {
   --angle: 0deg;
+
+  /* ::after 애니메이션 play-state를 CSS 변수로 제어 */
+  --after-play-state: var(--play-state, paused);
 
   inline-size: 100px;
   block-size: 100px;
@@ -101,11 +111,12 @@
     z-index: -1;
     border-radius: 10px;
     animation-name: angle;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: normal;
-    /* 단축속성 */
-    animation: angle 1s infinite linear normal;
+    animation-play-state: var(--after-play-state, paused);
+    /* 단축 속성 (animation-play-state는 단축에 포함 X) */
+    /* animation: angle 1s infinite linear normal; */
   }
 }

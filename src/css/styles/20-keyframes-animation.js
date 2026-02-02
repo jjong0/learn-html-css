@@ -1,4 +1,5 @@
 // 20-keyframes-animation.js
+
 document.addEventListener('DOMContentLoaded', function () {
   const wrapper = document.querySelector('.keyframes-wrapper');
   if (!wrapper) return;
@@ -25,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
     target.classList.remove(animationClass);
     void target.offsetWidth;
     target.classList.add(animationClass);
-    target.style.animationPlayState = 'paused';
+    target.style.setProperty('--play-state', 'paused');
+    target.style.setProperty('--after-play-state', 'paused');
     toggleBtn.textContent = '재생';
   };
 
@@ -33,12 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleAnimation = () => {
     const { target } = getTargetAndClass();
     if (!target) return;
-    const isPaused = getComputedStyle(target).animationPlayState === 'paused';
+    const isPaused = getComputedStyle(target).getPropertyValue('--play-state').trim() === 'paused';
     if (isPaused) {
-      target.style.animationPlayState = 'running';
+      target.style.setProperty('--play-state', 'running');
+      target.style.setProperty('--after-play-state', 'running');
       toggleBtn.textContent = '일시정지';
     } else {
-      target.style.animationPlayState = 'paused';
+      target.style.setProperty('--play-state', 'paused');
+      target.style.setProperty('--after-play-state', 'paused');
       toggleBtn.textContent = '재생';
     }
   };
