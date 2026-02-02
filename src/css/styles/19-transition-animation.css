@@ -1,4 +1,8 @@
 /* 공통 스타일 */
+h2 {
+  margin-block: 10px;
+}
+
 .transition-wrapper {
   p {
     padding: 20px;
@@ -27,12 +31,53 @@
 /* 배경색상과 둥근모서리 변경 */
 .lion {
   background: var(--mint);
-  transition-property: background border-radius;
-  transition-duration: 2000ms;
+  transition-property: background, border-radius;
+  transition-duration: 500ms, 1000ms;
+  transition-delay: 0ms, 200ms;
+  transition-timing-function: ease-in-out;
+  transition:
+    background 500ms 0ms,
+    border-radius 1000ms 200ms;
 
   &.is-active {
     background: var(--black);
     color: var(--white);
     border-radius: 50px;
+  }
+}
+
+/* 너비 변경 */
+.euid {
+  background: var(--orange);
+  inline-size: 200px;
+  transition-property: inline-size;
+  transition-duration: 1000ms;
+
+  &.is-active {
+    inline-size: 400px;
+  }
+}
+
+/* transform 관련 속성 */
+/* 이동, 크기 변경 */
+.bootcamp {
+  background: var(--lavender);
+  padding: 20px;
+
+  p {
+    border: 1px solid currentColor;
+    inline-size: 400px;
+    transition-property: all;
+    transition-duration: 1000ms;
+  }
+
+  &.is-active {
+    p {
+      /* translate()함수 사용 */
+      transform: translate(50px, 10px);
+      /* transform 속성 사용 */
+      translate: 50px 10px;
+      scale: 1.1;
+    }
   }
 }
