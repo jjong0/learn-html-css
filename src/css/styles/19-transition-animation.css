@@ -35,9 +35,10 @@ h2 {
   transition-duration: 500ms, 1000ms;
   transition-delay: 0ms, 200ms;
   transition-timing-function: ease-in-out;
+  /* 단축 속성 */
   transition:
-    background 500ms 0ms,
-    border-radius 1000ms 200ms;
+    background 500ms 0ms ease-in-out,
+    border-radius 1000ms 200ms ease-in-out;
 
   &.is-active {
     background: var(--black);
