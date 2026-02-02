@@ -8,3 +8,33 @@
     opacity: 0;
   }
 }
+
+/* Shrink */
+@keyframes shrink {
+  100% {
+    scale: 0.7;
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0% {
+    /* transform: translateY(0); */
+    translate: 0 0;
+  }
+
+  100% {
+    /* transform: translateY(-10px); */
+    translate: 0 -10px;
+  }
+}
+
+/* Spin */
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
