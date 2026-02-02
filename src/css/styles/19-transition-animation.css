@@ -1,0 +1,38 @@
+/* 공통 스타일 */
+.transition-wrapper {
+  p {
+    padding: 20px;
+  }
+  .toggle {
+    border: 0;
+    padding: 10px;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: 4px;
+    margin-block-end: 10px;
+  }
+}
+
+/* 배경색상 변경 */
+.like {
+  background: var(--yellow);
+  transition-property: background;
+  transition-duration: 2000ms;
+
+  &.is-active {
+    background: var(--pink);
+  }
+}
+
+/* 배경색상과 둥근모서리 변경 */
+.lion {
+  background: var(--mint);
+  transition-property: background border-radius;
+  transition-duration: 2000ms;
+
+  &.is-active {
+    background: var(--black);
+    color: var(--white);
+    border-radius: 50px;
+  }
+}
