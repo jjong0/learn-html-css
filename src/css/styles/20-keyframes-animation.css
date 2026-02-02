@@ -75,3 +75,37 @@
   animation-direction: normal;
   animation-timing-function: linear;
 }
+
+/* angle */
+.angle.target-animation {
+  --angle: 0deg;
+
+  inline-size: 100px;
+  block-size: 100px;
+  text-align: center;
+  align-content: center;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 10px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: conic-gradient(from var(--angle), #f00 0 25%, transparent 25% 100%);
+    inline-size: 110%;
+    block-size: 110%;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    isolation: isolate;
+    z-index: -1;
+    border-radius: 10px;
+    animation-name: angle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    /* 단축속성 */
+    animation: angle 1s infinite linear normal;
+  }
+}
