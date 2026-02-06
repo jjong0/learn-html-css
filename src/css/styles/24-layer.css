@@ -1,0 +1,39 @@
+@layer frontend, bootcamp;
+
+@layer {
+  .like {
+    border: 5px solid purple !important;
+    padding: 20px;
+    background: var(--blue);
+  }
+}
+
+@layer frontend {
+  .like {
+    border: 5px solid blue;
+    padding: 20px;
+    background: var(--mint);
+  }
+}
+
+@layer euid {
+  .like {
+    border: 5px solid red !important;
+    padding: 20px;
+    background: var(--yellow);
+  }
+}
+
+@layer bootcamp {
+  .like {
+    border: 5px solid green !important;
+    padding: 20px;
+    background: var(--pink);
+  }
+}
+
+.like {
+  border: 5px solid black !important;
+  padding: 20px;
+  background: var(--lavender);
+}
